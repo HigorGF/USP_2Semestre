@@ -114,5 +114,59 @@ return false //Passei por todos e não achei.
 //Segunda parte da aula
 
 
+//Pilhas duplas
+    //Divisão se uma pilha que se irá se alterar em algum momento
+    //O numero de registros não muda, mas ele se move sem se misturar
+    //Ex: Mover uma pilha de provas não corrigida para uma pilha corrigida 
+        //O tamanho não pode se alterar, a soma delas é a mesma
+
+//Invés de fazer literalmente duas pilhas, a Pilha Dupla mantém duas em uma mesma estrutura.
+    //Isso economiza memória (Se eu criasse duas, teria que oucupar 2x mais memória)
+
+//Chamada principalmente de PD
+
+typedef struct {
+    registro A[max];
+    *int topo1; //A que cresce normalmente da esquerda pra direita
+    *int topo2; //A que cresce da direita pra esquerda
+} PD //Pilha dupla
+
+void inicializar(PD* p){
+    p->topo1 = -1;
+    p->topo2 = max; //De tras pra frente
+}
+
+bool inserir(pd *p, registro reg, int pilha){ //Esse parametro de pilha é para me dizer qual pilha
+if(pilha<1||pilha>2) return false; //Só existe pilha 1 e 2
+if(p->topo1 + 1 == p->topo2) return false; //A soma das pilhas está lotada (Pode ficar no máximo meio a meio)
+if(pilha == 1){
+    p->topo1++; //Da esquerda pra direita
+    p->a[p->topo1] = reg;
+}
+else {
+    p->topo2--; //Da direita pra esquerda
+    p->a[p->topo2] = reg;
+}
+return true;
+}
+
+registro reg; //Aqui também a exclusão vai guardar
+
+bool excluir(pd* p,int pilha, registro* reg){
+    if(pilha<1||pilha>2) return false; //Mesma coisa da inclusão
 
 
+if(pilha == 1){
+    if(p->topo1 == -1) return false; //Vejo se ta vazia
+    *reg = p->a[p->topo1];
+    p->topo1--; //Diminuindo da direita pra esquerda
+}
+else {
+    if(p->topo2 == max) return false; //Vejo se ta vazia
+    *reg = p->a[p->topo2];
+    p->topo2++; //Diminuindo da esquerda pra direita
+}
+return true;
+
+
+}
