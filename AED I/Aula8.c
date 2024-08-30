@@ -34,9 +34,16 @@
     //Ai fica O(1) invés O(N) como seria a contagem de elementos
 
     
+//No geral todo o resto é identico a pilha, independente do dinamismo
 
-
-
+//EP
+    //
+    //No Site
+        //Tem Exemplo de saida
+        //Tem Codigo pré feito
+    //Individual
+    //Gerenciador de Maratona
+    //Outras descrições no site
 
 
 
