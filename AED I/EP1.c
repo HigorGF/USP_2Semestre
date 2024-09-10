@@ -177,7 +177,12 @@ bool organizarTime(MARATONA* mar,ELEMENTO* elem){
 
 	//Tenho que inserir antes do atual, atual é o elemento que estará abaixo do inserido no ranking
 
-	if(atual == mar->cabeca->prox){
+	if(atual == elem){
+		return true;
+	}
+
+
+	else if(atual == mar->cabeca->prox){
         if(elem->ant)  elem->ant->prox = elem->prox;
 		if(elem->prox) elem->prox->ant = elem->ant;
 
@@ -187,10 +192,6 @@ bool organizarTime(MARATONA* mar,ELEMENTO* elem){
         mar->cabeca->prox = elem;
 	}
 	
-	else if(atual == elem){
-		return true;
-	}
-
 
 	else if(atual->prox == NULL && calcularProblemasResolvidosDoTime(atual->time) >= elemResolvidos && calcularProblemasResolvidosDoTime(atual->time) <= elemResolvidos){
         if(elem->ant)  elem->ant->prox = elem->prox;
@@ -211,6 +212,7 @@ bool organizarTime(MARATONA* mar,ELEMENTO* elem){
         if(atual->ant) atual->ant->prox= elem;
         atual->ant = elem;
     }
+	
 	return true;
 }
 
