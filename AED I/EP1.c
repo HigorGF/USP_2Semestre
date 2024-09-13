@@ -193,16 +193,6 @@ bool organizarTime(MARATONA* mar,ELEMENTO* elem){
 	}
 	
 
-	else if(atual->prox == NULL && calcularProblemasResolvidosDoTime(atual->time) >= elemResolvidos && calcularProblemasResolvidosDoTime(atual->time) <= elemResolvidos){
-        if(elem->ant)  elem->ant->prox = elem->prox;
-		if(elem->prox) elem->prox->ant = elem->ant;
-
-		atual->prox = elem;
-		elem->ant = atual;
-		elem->prox = NULL;
-	}
-
-
     else{
         if(elem->ant)  elem->ant->prox = elem->prox;
 		if(elem->prox) elem->prox->ant = elem->ant;
@@ -234,9 +224,10 @@ bool tratarSubmissao(MARATONA* mar, int id, int problema, int tempo, bool acerto
 
     if(acerto){
         atual->time->resolvidos[problema] = true;
+		organizarTime(mar, atual);
     }
 
-    organizarTime(mar, atual);
+    
     return true;
 }
 

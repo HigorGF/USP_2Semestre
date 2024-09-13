@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef bool int
+typedef tipochave int
+
+#define max 50
+#define erro -1
+#define true 1
+#define false 0
+#define invalido -1
+typedef struct
+
+
+typedef struct aux{
+    tipochave ch;
+} registro; 
+
+
+typedef struct aux{
+    registro reg;
+    struct aux* prox;
+} Elemento, Pont*
+
+
+typedef struct{
+    pont inicio;
+    pont fim;
+} Estrutura;
