@@ -220,9 +220,10 @@ bool tratarSubmissao(MARATONA* mar, int id, int problema, int tempo, bool acerto
 
 	atual->time->tentativas[problema]++;
    
-    atual->time->minutos[problema] = tempo; //Conferir Isso
+    
 
     if(acerto){
+		atual->time->minutos[problema] = tempo;
         atual->time->resolvidos[problema] = true;
 		organizarTime(mar, atual);
     }
