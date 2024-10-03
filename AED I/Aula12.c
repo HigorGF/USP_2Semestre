@@ -76,7 +76,25 @@
     //e talvez não seja entendido como um erro, combinar com usuario
 
 
+//Obs* Não anotei códigos de exemplo, ver no slide
 
 
-//
+//Apendice de Recursividade
+    //Recursividade na aula de pilha mútipla é possível e economzia processo
+    //O pior caso possível continua o mesmo, mas ele só move quem precisa mover
+    //Ex Deslocar para direita:
+
+    //If(Não estou cheio || delocarparadireita(prox)){
+    // Me movo e retorno true}
+    //Else retorno false
+    
+    //Note que a recursividade está na chamada boleana, a ordem do "OU ||" importa
+    //Tenho que retornar true para falar pra proxima que consegui me mover e consequentemente
+    //Mover as adiantes à mim.
+
+    
+
+
+
+
 
