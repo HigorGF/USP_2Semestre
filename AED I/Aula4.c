@@ -90,13 +90,13 @@ bool inserir(lista* l, registro reg){
     if(l->dispo==-1) return false;  //Se a lista tiver cheia o dispo acaba virando -1. 
                                     //E como eu não quero inserir nada na lista cheia eu retorno esse erro
     int ant = invalido; //Faço o loop guarando quem está atrás dele
-    int i -> l->int; //Quem eu vou iterar
+    int i = l->ini; //Quem eu vou iterar
     while(i!=invalido && l->A[i].reg.chave<reg.chave){ //Duas condições 1- O i não pode ser invlido poruquê isso signifca que ele chegou no final. 
                                                                     // 2- Não entendi
-    ant = 1; //Vou andando cada um da lista
-    i = i -> prox; //Arrumar isso
+    ant = i; //Vou andando cada um da lista
+    i = l[i] -> prox; //Arrumar isso
 }
-    if(i!=invlaido && l-A[i].reg.chave==reg.chave) return false
+    if(i!=invalido && l-A[i].reg.chave==reg.chave) return false;
     i=l->dispo; //Pos do novo elemento (Não devia ter usado o I aqui, pois ele signifca algo diferente)
     l->dispo = l->A[l->dispo].prox;
     l->A[i].reg=reg;

@@ -52,7 +52,7 @@ while(ini<fim){
 
     if(l->A[meio].chave == ch) return meio;
     if(l->A[meio].chave < ch) ini = meio+1; //Se achei um valor menor, então eu corto para metade dos maiores
-    if(l->A[meio].chave > ch) fim = meio-1; //Se achei um valor maior, então eu corto para metade dos menores
+    else fim = meio-1; //Se achei um valor maior, então eu corto para metade dos menores
     //-1 e +1 é´porque eu já sei que o meio em sí não é o valor, porque se fosse já teria encontrado
 }
 return ERRO; //Se chegar aqui ele não achou

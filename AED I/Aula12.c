@@ -9,7 +9,7 @@
     //int** M = (int**)malloc(sizeof(int*)*2);
 
     //for(i=0;i<2;i++){
-    //M[i] (int**)malloc(sizeof(int*)*3)}
+    //M[i] = (int*)malloc(sizeof(int)*3)}
 
     //Nesse exemplo fiz uma 2, 3. Simplemente criando espaços em um ponteio de ponteiro de inteiros
 

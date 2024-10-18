@@ -67,10 +67,10 @@ int tamanho(Lista l){ //Como a lista é um ponteiro, não tem custo nenhum eu pa
 
 
 //Buscando
-//Assumindo que esla está ordenada, no site da matéria tem uma função que não assume
+//Assumindo que esla está ordenada. no site da matéria tem uma função que não assume
 pont buscaSeqOrd(Lista* l, tipochave ch){ //Podeira ser copia também
     pont pos = l->inicio;
-    while(pos&&ch >= pos->reg.chave) pos = pos->prox;//Como está ordenado, as condições é 1- Ter elemento válido e 
+    while(pos&&ch > pos->reg.chave) pos = pos->prox;//Como está ordenado, as condições é 1- Ter elemento válido e 
                                                     //2- A chave atual for menor que eu estou buscando (se for maior que dizer que já passou e não achou)
 
     
