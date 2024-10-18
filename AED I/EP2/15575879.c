@@ -1,11 +1,11 @@
 /*********************************************************************/
-/**   ACH2023 - Algoritmos e Estruturas de Dados I		  **/
-/**   EACH-USP - Segundo Semestre de 2024			   **/
-/**								 **/
-/**   Segundo Exercicio-Programa				    **/
-/**								 **/
-/**   Higor Gabriel de Freitas		  15575879                     94 **/
-/**								 **/
+/**   ACH2023 - Algoritmos e Estruturas de Dados I		  			**/
+/**   EACH-USP - Segundo Semestre de 2024			   				**/
+/**								 									**/
+/**   Segundo Exercicio-Programa				    				**/
+/**								 									**/
+/**   Higor Gabriel de Freitas		  15575879            94 		**/
+/**								 									**/
 /*********************************************************************/
 
 
