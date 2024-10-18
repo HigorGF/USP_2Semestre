@@ -244,7 +244,7 @@ void conferirRecu(PONT raiz, char* palavra, int n){
 			}
 		}
 		atual->filhos = NULL;
-		free(atual->filhos);
+		free(atual->filhos); //Talvez isso seja desnecessario
 		if(ant){
 			free(atual); 
 
