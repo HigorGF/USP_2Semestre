@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "EP.C": "cpp"
+        "EP.C": "cpp",
+        "quicksort": "cpp"
     }
 }
