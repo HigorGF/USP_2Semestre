@@ -7,10 +7,10 @@
 
 
 //Caso1 
-//F(N) = O( N^(Logb(a)-e  )   => é Teta(logb(a))
+//F(N) = O( N^(Logb(a)-e  )   => é Teta(N^logb(a))
 
 //Caso2
-//F(N) = Teta( N^(Logb(a))   => é Teta(logb(a)*lgn)
+//F(N) = Teta( N^(Logb(a))   => é Teta(N^logb(a)*lgn)
 
 //Caso3
 //F(N) = Omega( N^(Logb(a)+e  )   => é Teta(f(n))

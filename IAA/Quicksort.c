@@ -1,6 +1,6 @@
 quicksort(int A[],int ini,int fim){
     if(ini<fim){
-        q = partition(a[],ini,fim);
+        int q = partition(a[],ini,fim);
         quicksort(A[],ini,q-1);
         quicksort(A[],q+1,fim);
     }
