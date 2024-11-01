@@ -74,3 +74,5 @@ void exibirPreordemIterativo(pont raiz){
     }
     //Terminei se cheguei aqui. a execução será igual.
 }
+//Analisar compelxidade de algo iterativo é muito complicado pelo código.
+//O while da pilha é muito caótico, pois você não tem certeza da lógica, é preciso fazer uma analise mais profunda (É O(N))
