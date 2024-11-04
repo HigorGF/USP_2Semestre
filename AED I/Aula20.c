@@ -79,3 +79,6 @@ void exibirPreordemIterativo(pont raiz){
 
 //Com relação a complexidade de memória não mudou nada (até piorou a constante), pois a esturura auxiliar ocupa a mesma memória, todo N passa por ela. 
 //As vezes a memoria pode ser pior ou melhor que no recursivo, depende.
+
+
+//PROFESSOR DISSE QUE PODE CAIR NA PROVA
