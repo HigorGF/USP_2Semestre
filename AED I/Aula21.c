@@ -39,7 +39,6 @@ void exibiremnivel(pont raiz){
             entrarfila(atual->dir,&f);
     }
 }
-
 //Agora falando da compelxidade
     //Ela não pode ter nada recursivo pois ela é iterativa.
     //Inserir, tirar, atualizar é tudo O(1);
@@ -50,3 +49,18 @@ void exibiremnivel(pont raiz){
             //Entender o que o código faz é mais importante para analisar ele.
 
 
+//Organizando a arvore apra ficar sempre o mais compacta possível.
+    //Se toda hora que eu fosse arrumar uma inserção e exluclusão eu arrumasse eu teria que mudar mais da metade de toda árvore e isso com certeza perdeira a vantagem da busca logn pois a inserção e a exclusão seriam N
+        //Se esse fosse o caso seria melhor fazer uma estrutura não dinâmica.
+
+    //A solução então foi fazer uma regra que permite certa desequilíbrio na arvore, mas sem prejudicar muito a busca.
+        //A regra foi que a diferença de altura de uma ponta à outra não pode passar de 1.
+        //Se passar, tem que ser corrigido.
+        //Ou seja, por exemplo, eu poderia ter um lado com 3 de altura e outro com 2 de altura sem problemas, mas se eu inserir em um lugar que faça com que o 3 vire 4, eu preciso arrumar esse novo elemento.
+
+        //E a grande sacada é transformar um encadeamento triplo "/" ou "> " etc em um "^"
+        //Isso é chamado de AVL e é só um movimento pra fazer isso tudo.
+            //Tem 4 tipos de encadeamos triplos, e preciso de uma regra mais complicada prara abranger cada um deles.
+
+
+    //Isso vai ser visto mais daqui a 2 aulas. Principalmente o "Arrumar" o desbalancemento
