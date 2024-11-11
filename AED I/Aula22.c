@@ -29,20 +29,21 @@ bool excluirno(pont* raiz, tipochave ch){
     pont atual = *raiz;
     if(!atual) return false; //Não há nada, logo eu não tenho o que excluir
     
-    if(atual->chave == ch){
-        pont substituto, pai_substituto; //Preciso saber quem vai ficar no lugar dele depois da exclusão
+    if(atual->chave == ch){ //Achei o CH
+        pont substituto, pai_substituto; //Preciso saber quem vai ficar no lugar dele depois da exclusão, pai substituto não serve pra nada
     
-        if(!atual->esq || !atual->dir){
+        if(!atual->esq || !atual->dir){ //Isso roda se ele não tem um dos filhos, ou seja é o ultimo antes da folha, então é só subsitituir
             if(atual->esq) substituto = atual->esq;
             else substituto = atual->dir;
-            *raiz = substituto; //Coloco o vetor substituto no lugar certo.
-            free(atual); //Apago quem eu buscavo
+            *raiz = substituto; 
+            free(atual); //Apago quem eu buscava
             return true;//Consegui
         }
 
         else{
-            substituto = marioAesquerda(atual,&pai_substituto);
-            atual->chave = substituto->chave;
+            substituto = marioAesquerda(atual,&pai_substituto); //Pai substituto é só pra poder rodar essas função sem problema.
+
+            atual->chave = substituto->chave; //Coloco o vetor substituto no lugar de quem vai ser excluido
             ch = substituto->chave; //Eu já Substitui o que eu queria apagar de fato, agora eu preciso achar o original ( o que virou o substituto)
         }
 
