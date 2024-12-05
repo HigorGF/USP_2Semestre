@@ -40,6 +40,6 @@
             u->bal = 0;
             return u;
         }
-    }   //É impossível o U ser 0, pois se ele é zero não tem problema abaixo dele, ele está balanceado.
+    }   //É impossível o U ser 0 NA INSERÇÃO, pois se ele é zero não tem problema abaixo dele, ele está balanceado.
         //Na remoção isso é possível, pois o outro lado pode ter diminuido e ter desbalanceado um lado que estava balanceado.
 

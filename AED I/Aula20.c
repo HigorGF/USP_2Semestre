@@ -65,7 +65,7 @@ void exibirPreordemIterativo(pont raiz){
     Pont atual;
 
     while(!estavazio(&pi)){
-        atual = pop(%pi); //Pego ele da pilha (excluo ele de lá) e começo a processar
+        atual = pop(&pi); //Pego ele da pilha (excluo ele de lá) e começo a processar
         printf("%i",atual->chave); //Processo
         //Coloco o proximo na pilha
         if(atual->dir) push(atual->dir,&pi); 

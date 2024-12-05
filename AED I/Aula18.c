@@ -73,7 +73,7 @@ bool excluirno(pont* raiz, tipochave ch){
         else subs = atual->dir //independe do que seja, vai ser o que tem que ir pra direita
         //Agora preciso descobrir se sou filho direito ou esquerdo do meu pai
         //Pra isso prefio primeiro conferir se sou a raiz (ela não tem pai)
-        if(!paisubs){
+        if(!pai){
             *raiz = subs;
         }
         else{

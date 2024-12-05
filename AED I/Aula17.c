@@ -30,7 +30,7 @@ Pont buscabin(Pont r, TIPOCHAVE ch){
     if(!r) return false;
     if(r->chave == ch) return r;
     if(r->chave < ch) return buscabin(r->dir, ch);
-    else return buscabin(r->esq, ch); //O else aqui nem é necessário pois acima já tem um else
+    else return buscabin(r->esq, ch); //O else aqui nem é necessário pois acima já tem um return
 }
 
 //Pior caso é O de N

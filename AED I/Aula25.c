@@ -22,13 +22,13 @@ pont rotacaoL(pont P){ //Ela também aborda o caso LR em um ELSE, mas só na pr�
     u->esq = v->dir; //Imaginei  u->esq = v->esq
     v->esq = u;
     v->dir = p;
-    //Pelo slide fica "BCDA", Mas eu imaginei "BDCA", tenho que rever isso
+    //Pelo slide fica  "BDCA", tenho que rever isso
     
     //U e P vai ter balanceamento alterado dependendo do V antigo, já que podia ser -1/0/1
     if(v->bal == -1) p->bal = 1;    //Pois ai P vai ser B = h-3 - (h-4)
     else p->bal = 0;                //Pois ai P vai ser B = h-3 - (h-3)
     if(v->bal == 1) u->bal = -1;    //Pois ai U vai ser B = h-4 - (h-3)
-    else p->bal = 0;                //Pois ai U vai ser B = h-3 - (h-3)
+    else u->bal = 0;                //Pois ai U vai ser B = h-3 - (h-3)
     //Lembrando que B é sempre H direita - H esquerda
 
     v->bal = 0; //Agora sim posso alterar o V para 0

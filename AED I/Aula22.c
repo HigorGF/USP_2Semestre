@@ -51,7 +51,7 @@ bool excluirno(pont* raiz, tipochave ch){
 
     //Caso eu ainda não passei pelo return true, ou seja, achei o CH mas não o substituto eu chego aqui
     if(ch>atual->chave) return excluirno(&(atual->dir),ch); //Chamo pra direita se for o caso
-    return excluirno(&(atual->dir),ch); //Ou chamo pra esquerda
+    return excluirno(&(atual->esq),ch); //Ou chamo pra esquerda
 
 
 }
